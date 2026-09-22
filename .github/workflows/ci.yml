@@ -1,0 +1,50 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Type-check site
+        run: npm run check
+      - name: Type-check API functions
+        run: npm run check:api
+      - name: API runtime tests
+        run: npm run test:api
+      - name: Production build
+        run: npx vite build
+      - name: Block unapproved public claims
+        run: |
+          set -e
+          # Fundraising terms stay off the public site until counsel approves (MARKETING_SITE_REVIEW S7).
+          if grep -rInE '\$1\.5M|\$15M|1,500,000|15,000,000|post-money SAFE' client/src api server scripts; then
+            echo "::error::Public fundraising terms found"; exit 1; fi
+          # Never claim certifications without evidence.
+          if grep -rInE 'SOC ?2 (Type|certified|compliant)|ISO ?27001 certified|PCI DSS (certified|compliant)' client/src api server; then
+            echo "::error::Unverified certification claim found"; exit 1; fi
+      - name: npm audit (production deps, high+)
+        run: npm audit --omit=dev --audit-level=high
+        continue-on-error: true
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

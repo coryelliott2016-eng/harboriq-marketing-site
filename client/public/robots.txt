@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# The admin lead dashboard is unlisted and token-gated; keep it out of indexes.
+Disallow: /team
+Disallow: /#/team
+
+Sitemap: https://harboriq.com/sitemap.xml
