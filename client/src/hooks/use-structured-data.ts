@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 
-const SITE_ORIGIN = "https://harboriq.com";
+export { canonicalFor } from "@/lib/site-origin";
+import { canonicalFor } from "@/lib/site-origin";
 
 /**
  * Injects a JSON-LD <script> into <head> for the lifetime of the mounted route.
  * Keyed by `id` so re-renders replace rather than duplicate, and removed on
- * unmount so a hash-route change never leaves stale structured data behind.
+ * unmount so a route change never leaves stale structured data behind.
  */
 export function useStructuredData(id: string, data: unknown): void {
   // Serialize outside the effect so an inline object literal doesn't retrigger it
@@ -27,12 +28,6 @@ export function useStructuredData(id: string, data: unknown): void {
       document.getElementById(elementId)?.remove();
     };
   }, [id, json]);
-}
-
-/** Canonical hash URL for a route, matching usePageMeta's canonical format. */
-export function canonicalFor(path: string): string {
-  const clean = path === "/" ? "" : path.replace(/^\//, "");
-  return `${SITE_ORIGIN}/#/${clean}`;
 }
 
 /**

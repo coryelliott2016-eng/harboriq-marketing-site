@@ -72,7 +72,7 @@ const homeFaqs = [
 export default function Home() {
   usePageMeta({
     description:
-      "HarborIQ is the intelligent operating system for marine-service businesses: marine work orders, AI-assisted technician dispatch, Stripe invoicing, marina slip management, an offline field app, and a customer portal.",
+      "HarborIQ is the intelligent operating system for marine-service businesses: marine work orders, explainable technician dispatch scoring, Stripe invoicing, marina slip management, an offline field app, and a customer portal.",
     path: "/",
   });
 
@@ -92,14 +92,14 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-300">
-              Marine work orders · AI dispatch · Invoicing · Slips
+              Marine work orders · Smart dispatch · Invoicing · Slips
             </span>
             <h1 className="mt-6 font-display text-2xl font-bold leading-[1.05] text-white">
               Run your entire marine-service business from one intelligent platform.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/75">
               HarborIQ is the operating system for mobile marine mechanics, boatyards, and marinas —
-              work orders, AI-assisted dispatch, Stripe invoicing, and slip management, with an
+              work orders, smart dispatch scoring, Stripe invoicing, and slip management, with an
               offline field app for when the dock has no signal.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">

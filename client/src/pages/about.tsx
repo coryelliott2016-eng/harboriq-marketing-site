@@ -44,7 +44,7 @@ export default function About() {
                 repowers, and diagnostics on other people's boats, on other people's schedules.
               </p>
               <p className="text-base text-muted-foreground mt-4">
-                HarborIQ was built to be marine-specific from the ground up — CRM, AI-assisted
+                HarborIQ was built to be marine-specific from the ground up — CRM, explainable
                 dispatch, Stripe-based invoicing, marina and slip management, an offline field app,
                 and a customer portal, all built to a Zero-Trust, OWASP ASVS Level 3 security
                 standard from the start rather than retrofitted later.

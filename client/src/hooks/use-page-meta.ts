@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 
+import { canonicalFor } from "@/lib/site-origin";
+
 const SITE_NAME = "HarborIQ";
-const SITE_ORIGIN = "https://harboriq.com";
 
 function setMeta(selector: string, attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(selector);
@@ -49,7 +50,7 @@ export function usePageMeta({ title, description, path }: PageMeta) {
     setMeta('meta[name="twitter:title"]', "name", "twitter:title", fullTitle);
     setMeta('meta[name="twitter:description"]', "name", "twitter:description", description);
 
-    const canonical = path && path !== "/" ? `${SITE_ORIGIN}/#${path}` : `${SITE_ORIGIN}/`;
+    const canonical = canonicalFor(path ?? "/");
     setLink("canonical", canonical);
     setMeta('meta[property="og:url"]', "property", "og:url", canonical);
   }, [title, description, path]);

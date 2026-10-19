@@ -46,7 +46,7 @@ export const TOUR_SURFACES: TourSurface[] = [
     label: "Dispatch",
     icon: Radar,
     headline: "Assign the right tech without re-planning the whole day",
-    body: "A board you can drag, with AI scoring that weighs certification, parts on the truck, urgency, and drive time. The dispatcher decides; the score just does the arithmetic.",
+    body: "A board you can drag, with a transparent score that weighs certification, parts on the truck, urgency, and drive time. The dispatcher decides; the score just does the arithmetic.",
     render: () => <DispatchBoardPreview />,
   },
   {

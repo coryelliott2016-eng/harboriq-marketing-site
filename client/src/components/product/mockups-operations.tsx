@@ -205,7 +205,7 @@ export function DispatchBoardPreview() {
   return (
     <PreviewFrame
       title="Dispatch board"
-      caption="Drag-and-drop assignment with AI job scoring by fit, urgency, and drive time."
+      caption="Drag-and-drop assignment with explainable job scoring by fit, urgency, and drive time."
       testId="preview-dispatch-board"
     >
       <AppShell
@@ -215,7 +215,7 @@ export function DispatchBoardPreview() {
           <>
             <h3 className="font-display text-sm font-bold">Dispatch · Tue Jun 9</h3>
             <Pill tone="amber">2 unassigned</Pill>
-            <Pill tone="cyan">AI scoring on</Pill>
+            <Pill tone="cyan">Scoring on</Pill>
           </>
         }
       >

@@ -6,7 +6,7 @@ import { CheckCircle2 } from "lucide-react";
 export default function ReleaseLog() {
   usePageMeta({
     title: "Release Log",
-    description: "All 17 shipped HarborIQ build phases in plain English, from multi-tenant foundations through AI workflows, Stripe billing, and the customer portal.",
+    description: "All 17 shipped HarborIQ build phases in plain English, from multi-tenant foundations through dispatch scoring, Stripe billing, and the customer portal.",
     path: "/resources/release-log",
   });
 

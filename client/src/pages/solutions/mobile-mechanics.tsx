@@ -27,7 +27,7 @@ export default function MobileMechanics() {
       ]}
       capabilities={[
         { icon: Users, title: "CRM & Jobs", body: "Every customer and vessel's history is one tap away, so you never start a job blind." },
-        { icon: Radar, title: "AI Dispatch", body: "AI-assisted job scoring helps you prioritize your route and reduce wasted drive time." },
+        { icon: Radar, title: "Smart Dispatch", body: "Explainable job scoring (urgency, distance, parts on hand) helps you prioritize your route and reduce wasted drive time." },
         { icon: Receipt, title: "Invoicing & Stripe", body: "Generate and send an invoice on-site, with payment collected through Stripe before you leave the dock." },
         { icon: WifiOff, title: "Offline Field App", body: "The installable PWA keeps working with no signal and syncs automatically once you're back in range." },
       ]}

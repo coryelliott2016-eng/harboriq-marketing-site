@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" sizes="64x64" href="./favicon-64.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preconnect" href="https://api.fontshare.com" />
     <link
       href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@400,500,600,700&display=swap"
@@ -16,25 +16,25 @@
     <title>HarborIQ — The Operating System for Marine Service Businesses</title>
     <meta
       name="description"
-      content="HarborIQ is the operating system for marine service businesses: CRM, AI-assisted dispatch, Stripe invoicing, marina slip and mooring management, an offline field app, and a customer portal — built for mobile mechanics, boatyards, and marinas."
+      content="HarborIQ is the operating system for marine service businesses: CRM, explainable dispatch scoring, Stripe invoicing, marina slip and mooring management, an offline field app, and a customer portal — built for mobile mechanics, boatyards, and marinas."
     />
     <meta name="theme-color" content="#0B2239" />
     <meta name="author" content="HarborIQ, Inc." />
     <meta name="robots" content="index, follow" />
 
-    <!-- Canonical (placeholder until the production domain is live) -->
-    <link rel="canonical" href="https://harboriq.com/" />
+    <!-- Canonical: origin is injected at build time (SITE_URL, see vite.config.ts) -->
+    <link rel="canonical" href="__SITE_ORIGIN__/" />
 
     <!-- Open Graph -->
     <meta property="og:site_name" content="HarborIQ" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://harboriq.com/" />
+    <meta property="og:url" content="__SITE_ORIGIN__/" />
     <meta property="og:title" content="HarborIQ — The Operating System for Marine Service Businesses" />
     <meta
       property="og:description"
-      content="CRM, AI-assisted dispatch, Stripe invoicing, marina slip and mooring management, an offline PWA field app, and a customer portal — one system for mobile marine mechanics, boatyards, and marinas."
+      content="CRM, smart dispatch scoring, Stripe invoicing, marina slip and mooring management, an offline PWA field app, and a customer portal — one system for mobile marine mechanics, boatyards, and marinas."
     />
-    <meta property="og:image" content="https://harboriq.com/og-image.jpg" />
+    <meta property="og:image" content="__SITE_ORIGIN__/og-image.jpg" />
     <meta property="og:image:width" content="1536" />
     <meta property="og:image:height" content="1024" />
     <meta
@@ -48,9 +48,9 @@
     <meta name="twitter:title" content="HarborIQ — The Operating System for Marine Service Businesses" />
     <meta
       name="twitter:description"
-      content="CRM, AI-assisted dispatch, Stripe invoicing, marina slip and mooring management, an offline PWA field app, and a customer portal for marine service businesses."
+      content="CRM, smart dispatch scoring, Stripe invoicing, marina slip and mooring management, an offline PWA field app, and a customer portal for marine service businesses."
     />
-    <meta name="twitter:image" content="https://harboriq.com/og-image.jpg" />
+    <meta name="twitter:image" content="__SITE_ORIGIN__/og-image.jpg" />
     <meta
       name="twitter:image:alt"
       content="A marine technician reviews a job on a tablet along a marina dock at dusk"
@@ -65,8 +65,8 @@
         "name": "HarborIQ, Inc.",
         "alternateName": "HarborIQ",
         "url": "https://harboriq.com/",
-        "logo": "https://harboriq.com/apple-touch-icon.png",
-        "image": "https://harboriq.com/og-image.jpg",
+        "logo": "__SITE_ORIGIN__/apple-touch-icon.png",
+        "image": "__SITE_ORIGIN__/og-image.jpg",
         "description": "HarborIQ builds the operating system for marine service businesses — mobile marine mechanics, boatyards, and marinas.",
         "email": "Cory@HarborIQ.com",
         "founder": {
@@ -100,12 +100,12 @@
         "applicationCategory": "BusinessApplication",
         "applicationSubCategory": "Marine service management",
         "operatingSystem": "Web, iOS, Android (progressive web app)",
-        "url": "https://harboriq.com/",
-        "image": "https://harboriq.com/og-image.jpg",
-        "description": "Marine service management software: CRM, AI-assisted dispatch, Stripe invoicing and Connect payouts, marina slip/mooring/dry-stack management with double-booking prevention, an offline-capable field app, and a customer portal.",
+        "url": "__SITE_ORIGIN__/",
+        "image": "__SITE_ORIGIN__/og-image.jpg",
+        "description": "Marine service management software: CRM, explainable dispatch scoring, Stripe invoicing and Connect payouts, marina slip/mooring/dry-stack management with double-booking prevention, an offline-capable field app, and a customer portal.",
         "featureList": [
           "Marine CRM for boats, owners, and service history",
-          "AI-assisted dispatch and scheduling",
+          "Explainable dispatch scoring and scheduling",
           "Stripe invoicing and Connect payouts",
           "Marina slip, mooring, and dry-stack management with double-booking prevention",
           "Offline-capable PWA field app",
