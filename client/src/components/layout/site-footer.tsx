@@ -11,7 +11,7 @@ export function SiteFooter() {
             <Logo className="[&_span]:text-white" />
             <p className="mt-4 max-w-xs text-sm text-white/50">
               The marine-service operating system for mobile mechanics, boatyards, and marinas —
-              CRM, AI dispatch, invoicing, and slip management in one place.
+              CRM, smart dispatch, invoicing, and slip management in one place.
             </p>
           </div>
 

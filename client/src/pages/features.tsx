@@ -26,7 +26,7 @@ const PILLAR_PREVIEW: Record<string, keyof typeof PRODUCT_PREVIEWS | undefined> 
 export default function Features() {
   usePageMeta({
     title: "Features — Marine Work Order & Dispatch Software",
-    description: "Every HarborIQ capability in one place: marine CRM, AI-assisted dispatch, Stripe invoicing and Connect payouts, slip and mooring management, the offline field app, and the customer portal.",
+    description: "Every HarborIQ capability in one place: marine CRM, explainable dispatch scoring, Stripe invoicing and Connect payouts, slip and mooring management, the offline field app, and the customer portal.",
     path: "/features",
   });
 

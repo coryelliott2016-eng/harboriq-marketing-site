@@ -34,10 +34,10 @@ export const featurePillars: FeaturePillar[] = [
   {
     id: "dispatch",
     icon: Radar,
-    title: "AI Dispatch",
+    title: "Smart Dispatch",
     summary: "Job scoring that helps you assign the right tech to the right job.",
     details: [
-      "AI-assisted job scoring for dispatch prioritization",
+      "Explainable, rule-based job scoring for dispatch prioritization",
       "Technician assignment based on job fit",
       "Fewer missed jobs and reduced no-shows",
     ],

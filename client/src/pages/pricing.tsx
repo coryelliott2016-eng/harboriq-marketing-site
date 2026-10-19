@@ -23,7 +23,7 @@ const ANNUAL_DISCOUNT = 0.83; // ~2 months free
 const comparisonRows: { label: string; values: (boolean | string)[] }[] = [
   { label: "CRM & job history", values: [true, true, true, true] },
   { label: "Invoicing with Stripe", values: [true, true, true, true] },
-  { label: "AI-assisted dispatch", values: [false, true, true, true] },
+  { label: "Smart dispatch scoring", values: [false, true, true, true] },
   { label: "Offline PWA field app", values: [false, true, true, true] },
   { label: "Customer portal", values: ["Read-only", "Interactive", "Interactive", "Interactive"] },
   { label: "Marina & slip management", values: [false, false, true, true] },

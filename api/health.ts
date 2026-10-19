@@ -2,7 +2,10 @@
  * GET /api/health — public liveness probe.
  *
  * Returns a small JSON payload and the deployed commit so ops can confirm a
- * deployment is actually receiving traffic. No secrets, no DB access.
+ * deployment is actually receiving traffic, plus `assistant`, which tells the
+ * client whether the "Ask HarborIQ" widget has a model provider configured so
+ * it can stay hidden instead of rendering a dead button. No secrets, no DB
+ * access.
  */
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { applySecurityHeaders } from "./_lib/http.js";
@@ -17,6 +20,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     service: "harboriq-marketing",
     version: process.env.VERCEL_GIT_COMMIT_SHA || "unknown",
     region: process.env.VERCEL_REGION || "unknown",
+    assistant: Boolean(process.env.ANTHROPIC_API_KEY),
     timestamp: new Date().toISOString(),
   });
 }

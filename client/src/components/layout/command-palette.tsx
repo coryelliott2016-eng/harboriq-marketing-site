@@ -54,7 +54,7 @@ export function CommandPalette() {
       if (href.includes("#")) {
         const [path, hash] = href.split("#");
         const targetPath = path || "/";
-        if (window.location.hash.split("#")[1] === targetPath || (targetPath === "/" && (window.location.hash === "" || window.location.hash === "#/"))) {
+        if (window.location.pathname === targetPath) {
           document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
         } else {
           navigate(targetPath);

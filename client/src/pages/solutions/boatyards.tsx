@@ -27,7 +27,7 @@ export default function Boatyards() {
       ]}
       capabilities={[
         { icon: Users, title: "CRM & Jobs", body: "A shared job record means any tech can pick up where another left off, with full history intact." },
-        { icon: Radar, title: "AI Dispatch", body: "AI-assisted job scoring helps assign work across your team based on job fit and availability." },
+        { icon: Radar, title: "Smart Dispatch", body: "Explainable job scoring helps assign work across your team based on certification fit, workload, and availability." },
         { icon: MonitorSmartphone, title: "Customer Portal", body: "Boat owners can check job status and invoices themselves, cutting down status-check calls." },
         { icon: BarChart3, title: "Accounting & Reporting", body: "Export accounting and reporting data for owners and bookkeeping without manual reconciliation." },
       ]}

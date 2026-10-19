@@ -11,7 +11,7 @@ export const releasePhases: ReleasePhase[] = [
   { phase: 3, title: "Customer CRM", summary: "Customer and vessel profiles with service history tracking." },
   { phase: 4, title: "Job Management", summary: "Job creation, statuses, and lifecycle tracking from intake to completion." },
   { phase: 5, title: "Scheduling", summary: "Calendar-based scheduling for technicians and jobs." },
-  { phase: 6, title: "AI Dispatch Scoring", summary: "AI-assisted scoring to help prioritize and assign jobs." },
+  { phase: 6, title: "Dispatch Scoring", summary: "Rule-based, explainable scoring (urgency, revenue, distance, parts, technician fit) to help prioritize and assign jobs." },
   { phase: 7, title: "Invoicing", summary: "Invoice generation tied to completed jobs." },
   { phase: 8, title: "Stripe Payments", summary: "Payment collection, Stripe Connect, and refund handling." },
   { phase: 9, title: "Marina & Slip Management", summary: "Slip assignment and availability tracking with double-booking prevention." },

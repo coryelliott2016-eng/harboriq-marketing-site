@@ -54,6 +54,19 @@ interface Bubble extends ChatMessage {
 }
 
 export function ChatAssistant() {
+  // The widget is only useful when /api/chat has a model provider behind it.
+  // Until the health probe confirms that, render nothing rather than a button
+  // that can only answer "temporarily unavailable".
+  const [enabled, setEnabled] = useState(false);
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch("/api/health", { signal: controller.signal })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => setEnabled(Boolean(j && j.assistant === true)))
+      .catch(() => setEnabled(false));
+    return () => controller.abort();
+  }, []);
+
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Bubble[]>([]);
   const [input, setInput] = useState("");
@@ -108,6 +121,8 @@ export function ChatAssistant() {
       setPending(false);
     }
   }
+
+  if (!enabled) return null;
 
   return (
     <>

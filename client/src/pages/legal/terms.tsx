@@ -118,8 +118,8 @@ export default function Terms() {
           heading: "6. AI features",
           body: (
             <p>
-              HarborIQ includes AI-assisted features such as dispatch scoring, maintenance
-              suggestions, and the website assistant. These produce <strong>suggestions, not
+              HarborIQ includes automated and AI-assisted features such as rule-based dispatch
+              scoring, maintenance suggestions, and the website assistant (when enabled). These produce <strong>suggestions, not
               decisions</strong>. They can be wrong, they are not a substitute for a qualified
               technician&apos;s judgment, and they must not be relied on for safety-critical marine
               decisions. A human always makes the final call — dispatch assignments, repair
