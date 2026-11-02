@@ -1,0 +1,57 @@
+{
+"repository": "coryelliott2016-eng/harboriq",
+"inspected_on": "2026-10-31",
+"source
+tree
+_
+_sha": "72827f4b54ca7ade94b3ae129127d4f5e31dc058",
+"files": [
+{
+"path": "app/schemas/auth.py",
+"blob
+sha": "1a5989abe4717f9f4f485cb1fc99061d890dbb1d"
+_
+},
+{
+"path": "app/schemas/customers.py",
+"blob
+sha": "af65c0348548f4d6cdb4d76accccdd89a440a9ee"
+_
+},
+{
+"path": "app/schemas/vessels.py",
+"blob
+sha": "48b2e4ba0c5ce9c356a1dca617a512a15d9958ca"
+_
+},
+{
+"path": "app/schemas/jobs.py",
+"blob
+sha": "07377cc7e200b52414f0e41417bf998c5e0f8fc8"
+_
+},
+{
+"path": "app/api/v1/routes/auth.py",
+"blob
+sha": "a86173d879f6bdc405c75c8f228912ee7cce8e15"
+_
+},
+{
+"path": "app/api/v1/routes/customers.py",
+"blob
+sha": "e260565a38f0e3723c2c0f949837b20a77dadcb5"
+_
+},
+{
+"path": "app/api/v1/routes/vessels.py",
+"blob
+sha": "4dfaa91af593102309c437dacb3783646a4fb00a"
+_
+},
+{
+"path": "app/api/v1/routes/jobs.py",
+"blob
+sha": "4483f41ecf6e78f4b2e5002a38c275e7abe0e422"
+_
+}
+]
